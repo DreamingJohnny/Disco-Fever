@@ -52,12 +52,14 @@ Or make people immune to the disco fever to make the sickness stop the spread.
 Links:
 Moving in a isometric grid system: https://www.youtube.com/watch?v=KvSjJ-kdGio 
 
+
 #Tisdagsplanering:
 Grid system with set size.
 Main menu
 Game over menu
 Starting to build main character
 Design NPCs and Bosses
+
 
 #Onsdagsplanering:
 Main character movement
@@ -66,12 +68,14 @@ Level 1 ground
 Starting to build first boss
 Updated Menus
 
+
 #Torsdagsplanering:
 NPC:s behavior
 Finnishing boss
 UI for health
 UI for hit
 Extra: Level 2
+
 
 #Friyayplanering:
 Extra: Boss 2
@@ -81,10 +85,18 @@ Polering
 Things to talk about:
 
 What have you learned? (important)?
+
 What was most difficult?
+
 What are we most pleased with?
+
 Show one script that you are happy with.
+
 Explain why you like it.
+
 How much time did you spend on the project?
+
 Funny things that happened? bugs?
+
 Share something fun you have found out about your teammates?
+
