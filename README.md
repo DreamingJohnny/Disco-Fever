@@ -76,3 +76,15 @@ Extra: Level 2
 #Friyayplanering:
 Extra: Boss 2
 Polering
+
+------------------------------------
+Things to talk about:
+
+What have you learned? (important)?
+What was most difficult?
+What are we most pleased with?
+Show one script that you are happy with.
+Explain why you like it.
+How much time did you spend on the project?
+Funny things that happened? bugs?
+Share something fun you have found out about your teammates?
