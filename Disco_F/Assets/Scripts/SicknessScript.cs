@@ -4,8 +4,17 @@ using UnityEngine;
 
 public class SicknessScript : MonoBehaviour
 {
-    private void OnTriggerStay2D(Collider2D collision)
+    public int viralStrength = -1;
+
+    private void Start()
     {
         
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.GetComponent<NPCHealthState>() != null)
+        {
+            other.GetComponent<NPCHealthState>().Sickening(viralStrength);
+        }
     }
 }

@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class NPCHealthState : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public int health;
+    public int maxHealth = 100;
+
     void Start()
     {
-        
+        health = maxHealth;
     }
-
-    // Update is called once per frame
-    void Update()
+    void Sickening()
     {
-        
+
     }
 }
+
