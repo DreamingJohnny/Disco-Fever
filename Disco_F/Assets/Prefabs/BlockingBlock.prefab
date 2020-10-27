@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -4278881466217801450}
   - component: {fileID: 4554667285210577003}
   - component: {fileID: 3105071775392979079}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BlockingBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4992416003060104226}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.4999998, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.00029027462, y: -0.021967888}
+  m_Offset: {x: -0.019702911, y: 0.2580955}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -120,5 +120,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6981447, y: 0.9560642}
+  m_Size: {x: 0.6181718, y: 1.516191}
   m_EdgeRadius: 0
