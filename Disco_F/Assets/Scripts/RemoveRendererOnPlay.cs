@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class RemoveRendererOnPlay : MonoBehaviour
 {
-    Renderer renderer;
     void Start()
     {
-        renderer = GetComponent<Renderer>();
+        Renderer renderer = GetComponent<Renderer>();
         renderer.enabled = false;
     }
-
- 
 }

@@ -6,8 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     Vector3 movement = new Vector3();
     float moveDistance = 0.5f;
-    bool movingRight;
+    bool blockedRight;
+    bool blockedLeft;
 
+    RaycastHit2D hit;
+    float minDistance = 0.25f;
+    float currentDistance;
 
 
     void Start()
@@ -16,28 +20,22 @@ public class PlayerController : MonoBehaviour
     }
 
 
-
     void Update()
     {
-        //RaycastHit2D hit;
-        //float theDistance = 0.25;
+        CheckIfCanMoveRight();
+        CheckIfCanMoveLeft();
 
-        //Vector3 right = transform.TransformDirection(Vector3.right) * 0.25f;
-        
-        
         float x = Input.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Horizontal"))
         {
-            if(x > 0)
+            if(x > 0 && !blockedRight)
             {
-                movingRight = true;
                 movement.x += moveDistance;
                 movement.y += (moveDistance / 2);
             }
-            else if(x < 0)
+            else if(x < 0 && !blockedLeft)
             {
-                movingRight = false;
                 movement.x -= moveDistance;
                 movement.y -= (moveDistance / 2);
             }
@@ -50,23 +48,41 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void CheckIfCanMoveRight()
     {
+        Vector3 right = transform.TransformDirection(Vector3.right) * minDistance;
+        Debug.DrawRay(transform.position, right, Color.red);
 
-        if (movingRight)
+        if (Physics2D.Raycast(transform.position, (right), minDistance))
         {
-            Debug.Log("Collided with something to the right");
-            movement.x -= moveDistance;
-            movement.y -= (moveDistance / 2);
-            transform.position += movement;
+            currentDistance = hit.distance;
+            if (currentDistance < minDistance)
+            {
+                blockedRight = true;
+            }
         }
         else
         {
-            Debug.Log("Collided with something to the left");
-            movement.x += moveDistance;
-            movement.y += (moveDistance / 2);
-            transform.position += movement;
+            blockedRight = false;
         }
-        movement = new Vector3(0, 0);
+    }
+
+    void CheckIfCanMoveLeft()
+    {
+        Vector3 left = transform.TransformDirection(Vector3.right) * -minDistance;
+        Debug.DrawRay(transform.position, left, Color.green);
+
+        if (Physics2D.Raycast(transform.position, (left), minDistance))
+        {
+            currentDistance = hit.distance;
+            if (currentDistance < minDistance)
+            {
+                blockedLeft = true;
+            }
+        }
+        else
+        {
+            blockedLeft = false;
+        }
     }
 }
