@@ -25,7 +25,6 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        Debug.Log("Collided with " + other);
         if (other.transform.tag == "Enemy")
         {
             Debug.Log("Trying to do damage");
