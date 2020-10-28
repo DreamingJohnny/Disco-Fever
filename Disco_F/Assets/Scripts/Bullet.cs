@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public int bulletDamage = 10;
+
     int randomNumber;
     public Sprite[] spritePicture;
-
+    BossHealthBar bossHealth;
     void Start()
     {
         randomNumber = Random.Range(0, spritePicture.Length);
@@ -20,4 +22,16 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        Debug.Log("Collided with " + other);
+        if (other.transform.tag == "Enemy")
+        {
+            Debug.Log("Trying to do damage");
+            bossHealth = FindObjectOfType<BossHealthBar>();
+            bossHealth.currentHealth -= bulletDamage;
+        }
+    }
+
 }
