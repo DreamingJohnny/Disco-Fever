@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SicknessScript : MonoBehaviour
+public class SicknessAura : MonoBehaviour
 {
-    public int viralStrength = -1;
+    public float auraStrength = -1;
 
     private NPCHealthState healthScript;
 
@@ -17,7 +17,7 @@ public class SicknessScript : MonoBehaviour
     {
         if (other.GetComponent<NPCHealthState>() != null)
         {
-            other.GetComponent<NPCHealthState>().Sickening(viralStrength);
+            other.GetComponent<NPCHealthState>().NPCSickens(auraStrength);
         }
     }
 }
