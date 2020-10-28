@@ -2867,7 +2867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c9c5be82957ad94ead4bc05ce12150e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  auraStrength: -1
+  auraStrength: 1
   auraGrowth: {x: 0.51, y: 0.45, z: 0.33}
 --- !u!1 &607605433
 GameObject:
@@ -5897,7 +5897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6775600323226449961, guid: da9ada06daa7a724f99140691f56d0fc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.522
+      value: -2.07
       objectReference: {fileID: 0}
     - target: {fileID: 6775600323226449961, guid: da9ada06daa7a724f99140691f56d0fc, type: 3}
       propertyPath: m_LocalPosition.y

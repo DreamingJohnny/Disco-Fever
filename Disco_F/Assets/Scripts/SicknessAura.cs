@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class SicknessAura : MonoBehaviour
 {
-    public float auraStrength = -1;
+    public float auraStrength = 1.5f;
  
     public Vector3 auraGrowth = new Vector3(0.1f, 0.1f, 0.1f);
 
-    private NPCHealthState healthScript;
-
     void Start()
     {
-        healthScript = GetComponent<NPCHealthState>();
+
     }
 
     private void Update()
