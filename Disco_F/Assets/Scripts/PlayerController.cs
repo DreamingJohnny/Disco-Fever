@@ -13,10 +13,16 @@ public class PlayerController : MonoBehaviour
     bool blockedRight;
     bool blockedLeft;
 
+    public float bulletSpeed;
+    public GameObject bullet;
+    Vector3 bulletDirection = new Vector3(-0.5f, 0.25f);
+    AudioSource shotSound;
+
 
     void Start()
     {
         movement = GetComponent<Transform>().position;
+        shotSound = GetComponent<AudioSource>();
     }
 
 
@@ -45,7 +51,15 @@ public class PlayerController : MonoBehaviour
 
         else
             movement = new Vector3(0,0);
-        
+
+        //Fireing
+        if (Input.GetButtonDown("Fire1"))
+        {
+            shotSound.Play();
+            GameObject firedShot = Instantiate(bullet, transform.position, transform.rotation);
+            firedShot.GetComponent<Rigidbody2D>().velocity = bulletDirection * bulletSpeed;
+        }
+
     }
 
     void CheckIfCanMoveRight()
