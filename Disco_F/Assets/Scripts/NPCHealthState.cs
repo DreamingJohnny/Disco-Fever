@@ -11,5 +11,11 @@ public class NPCHealthState : MonoBehaviour
     {
         health = maxHealth;
     }
+
+
+    public void Sickening(int viralStrength)
+    {
+        health -= viralStrength;
+    }
 }
 

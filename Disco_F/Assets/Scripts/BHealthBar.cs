@@ -8,7 +8,7 @@ public class BHealthBar : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
 
-    public BHealthBar BhealthBar;
+    public HealthBar BhealthBar;
 
     // Start is called before the first frame update
     void Start()
