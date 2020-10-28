@@ -6,12 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     Vector3 movement = new Vector3();
     float moveDistance = 0.5f;
-    bool blockedRight;
-    bool blockedLeft;
 
     RaycastHit2D hit;
     float minDistance = 0.25f;
     float currentDistance;
+    bool blockedRight;
+    bool blockedLeft;
 
 
     void Start()
