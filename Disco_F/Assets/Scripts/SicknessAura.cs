@@ -20,9 +20,4 @@ public class SicknessScript : MonoBehaviour
             other.GetComponent<NPCHealthState>().Sickening(viralStrength);
         }
     }
-
-    public void Sickening(int viralStrength)
-    {
-        healthScript.health -= viralStrength;
-    }
 }
