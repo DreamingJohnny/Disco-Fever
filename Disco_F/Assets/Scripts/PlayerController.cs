@@ -59,7 +59,6 @@ public class PlayerController : MonoBehaviour
             GameObject firedShot = Instantiate(bullet, transform.position, transform.rotation);
             firedShot.GetComponent<Rigidbody2D>().velocity = bulletDirection * bulletSpeed;
         }
-
     }
 
     void CheckIfCanMoveRight()

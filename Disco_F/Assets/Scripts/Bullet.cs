@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    float speed;
-    public float damage = 10;
+    int randomNumber;
+    public Sprite[] spritePicture;
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        randomNumber = Random.Range(0, spritePicture.Length);
+        GetComponent<SpriteRenderer>().sprite = spritePicture[randomNumber];
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (!GetComponent<Renderer>().isVisible)
