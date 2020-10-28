@@ -6,17 +6,31 @@ public class TestRemoveOnZeroHealth : MonoBehaviour
 {
     BossHealthBar bossHealth;
 
+    NPCHealthState npcHealthState;
+
     private void Start()
     {
-        bossHealth = GetComponent<BossHealthBar>();
+        if (GetComponent<NPCHealthState>() != null)
+        {
+            npcHealthState = GetComponent<NPCHealthState>();
+        }
+        else if (GetComponent<BossHealthBar>() != null)
+        {
+            bossHealth = GetComponent<BossHealthBar>();
+        }
     }
 
     private void Update()
     {
-        if (bossHealth.currentHealth <=  0)
+        if(npcHealthState.npcHealth <= 0)
         {
             Debug.Log("Try to die");
             Destroy(gameObject);
         }
+        /*else if (bossHealth.currentHealth <=  0)
+        {
+            Debug.Log("Try to die");
+            Destroy(gameObject);
+        }*/
     }
 }

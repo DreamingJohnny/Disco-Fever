@@ -31,8 +31,8 @@ public class NPCHealthState : MonoBehaviour
 
         contagiousArea = new SicknessAura();
         
-        GameObject.CreatePrimitive(PrimitiveType.Sphere);
-        sphere.transform.position = new Vector3(0, 0, 0);
+        //GameObject.CreatePrimitive(PrimitiveType.Sphere);
+        //sphere.transform.position = new Vector3(0, 0, 0);
 
     }
 
@@ -43,12 +43,12 @@ public class NPCHealthState : MonoBehaviour
             NPCCheckHealth();
             //Need to increase their sickness aura here? Will boss also have sickness aura true?
         }
-        else
-        {
+        //else
+        //{
             //if the NPC is cured, their aura needs to disappear,
 
-            contagiousArea = 
-        }
+            //contagiousArea = 
+        //}
     }
 
     public void NPCCheckHealth()

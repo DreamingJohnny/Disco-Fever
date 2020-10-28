@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -40,4 +40,4 @@ public class BossMovement : MonoBehaviour
         bossVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(bossVelocity * Time.deltaTime);
     }
-}
+}*/
