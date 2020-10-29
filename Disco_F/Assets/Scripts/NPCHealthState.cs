@@ -11,6 +11,7 @@ public class NPCHealthState : MonoBehaviour
     public float npcFeverThreshold = 10;
     public float npcCuredThreshold = 90;
     public GameObject sicknessArea;
+    public bool auraFromStart;
 
     //Enum to check state if npc is cured, neutral or feverish
     public enum npcState
@@ -27,6 +28,7 @@ public class NPCHealthState : MonoBehaviour
 
         npcCurrentHealth = npcMaxHealth * 0.5f;
 
+        sicknessArea.GetComponent<SicknessAura>().enabled = auraFromStart;
     }
 
     void Update()
@@ -34,12 +36,13 @@ public class NPCHealthState : MonoBehaviour
         if (npcCurrentState != npcState.isCured)
         {
             NPCCheckHealth();
-            //Need to increase their sickness aura here? Will boss also have sickness aura true?
+            if (npcCurrentState == npcState.isFeverish)
+            {
+                sicknessArea.GetComponent<SicknessAura>().enabled = true;
+            }
         }
         else 
         {
-            //if the NPC is cured, their aura needs to disappear,
-
             sicknessArea.SetActive(false);
         }
     }
