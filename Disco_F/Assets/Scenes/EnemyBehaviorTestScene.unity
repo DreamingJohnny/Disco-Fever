@@ -6077,6 +6077,27 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &1184778132 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4079717570506316681, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+  m_PrefabInstance: {fileID: 1829007423}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1184778133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1184778132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38581fa40d6f1254b888827a3928be72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyBulletDamage: 5
+  enemyBulletSpeed: 5
+  enemyTimeToFire: 0
+  enemyBullet: {fileID: 1012676850}
 --- !u!1 &1201917510
 GameObject:
   m_ObjectHideFlags: 0
@@ -9155,22 +9176,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1065036251}
     m_Modifications:
-    - target: {fileID: 1808324155, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1808324159, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: auraGrowth.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1808324159, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: auraGrowth.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1808324159, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: auraGrowth.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4079717570506316680, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -9219,16 +9224,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestNPC (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7386168995444544331, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7386168995444544332, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 756706294, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
 --- !u!1 &1835138936
 GameObject:

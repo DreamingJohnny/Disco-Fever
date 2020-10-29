@@ -2,19 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCShoting : MonoBehaviour
+public class NPCShooting : MonoBehaviour
 {
     public float enemyBulletDamage = 5f;
     public float enemyBulletSpeed = 5f;
+
+    GameObject npcFiredBullet;
 
     /*  fix later
     public Sprite[] spritePicture;
     AudioSource shotSound;
     shotSound = GetComponent<AudioSource>();
     */
-    
+
     public GameObject enemyBullet;
-    Vector3 enemyBulletDirection = new Vector3(-0.25f, 0.5f);
+    Vector3 enemyBulletDirection = new Vector3(0.5f, -0.25f);
 
     /*
      * So, I need to spawn bullets
@@ -26,17 +28,17 @@ public class NPCShoting : MonoBehaviour
 
     void Update()
     {
+
         //When firing
         GameObject npcFiredBullet = Instantiate(enemyBullet, transform.position, transform.rotation);
-        
-        npcFiredBullet.GetComponent<Rigidbody2D>().velocity = enemyBulletDirection * enemyBulletSpeed;
+        npcFiredBullet.GetComponent<Rigidbody2D>().velocity = enemyBulletDirection * enemyBulletSpeed * Time.deltaTime;
 
-        /*if (!GetComponent<Renderer>().isVisible)
+
+        if (!GetComponent<Renderer>().isVisible)
         {
             Destroy(gameObject);
-        }*/
+        }
     }
-
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.tag == "Player")
