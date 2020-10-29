@@ -5,8 +5,10 @@ using UnityEngine;
 public class NPCMovement : MonoBehaviour
 {
     bool shouldMove;
+    bool hitWall;
 
     Vector3 npcMovement = new Vector3();
+    int randomDirection;
 
     float npcMoveDistance = 0.5f;
 
@@ -19,18 +21,37 @@ public class NPCMovement : MonoBehaviour
     {
         shouldMove = GetComponent<NPCHealthState>().CheckIfCured();
 
-        if(shouldMove)
-        {
+        if(shouldMove && hitWall == false)
+        {       
             npcMoves();
-
-            Debug.Log("Is bustin those phat movezzz");
         }
     }
     void npcMoves()
     {
-        npcMovement.x -= npcMoveDistance;
-        npcMovement.y -= npcMoveDistance / 2;
+        randomDirection = Random.Range(0, 2);
+        if (randomDirection == 0)
+        {
+            npcMovement.x -= npcMoveDistance;
+            npcMovement.y -= npcMoveDistance / 2;
+        }
+        else if (randomDirection == 1)
+        {
+            npcMovement.x += npcMoveDistance;
+            npcMovement.y += npcMoveDistance / 2;
+        }
 
-        transform.position += npcMovement * 0.00001f;
+        transform.position += npcMovement * 0.0001f;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("Collided with a trigger box");
+        if (collision.transform.tag == "InvisWall")
+        {
+            Debug.Log("Collided with an inviswall");
+            hitWall = true;
+        }
+    }
+
+
 }
