@@ -1,24 +1,28 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCShoting : MonoBehaviour
 {
     public int enemyBulletDamage = 5;
-
-    public Sprite[] spritePicture;
-
-
     public float bulletSpeed;
-    public GameObject bullet;
-    Vector3 bulletDirection = new Vector3(-0.5f, 0.25f);
+
+    /*  fix later
+    public Sprite[] spritePicture;
     AudioSource shotSound;
-
-
     shotSound = GetComponent<AudioSource>();
 
+    
+    public GameObject bullet;
+    Vector3 bulletDirection = new Vector3(-0.5f, 0.25f);
 
-        //Fireing
+    /*
+     * So, I need to spawn bullets
+     * Then I need the bullets to move in the right direction
+     * Then I need the bullet to damage player
+     * Then I need the enemy that 
+     * 
+    //Firing
         if (Input.GetButtonDown("Fire1"))
         {
             shotSound.Play();
@@ -54,3 +58,4 @@ void Start()
     }
 }
 }
+*/

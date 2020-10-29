@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -36,3 +36,4 @@ public class NPCMovement : MonoBehaviour
         transform.position += npcMovement * 0.00001f;
     }
 }
+*/
