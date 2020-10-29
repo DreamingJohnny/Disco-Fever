@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     int randomNumber;
     public Sprite[] spritePicture;
-    BossHealthBar bossHealth;
+ 
     void Start()
     {
         randomNumber = Random.Range(0, spritePicture.Length);
@@ -28,8 +28,14 @@ public class Bullet : MonoBehaviour
         if (other.transform.tag == "Enemy")
         {
             Debug.Log("Trying to do damage");
-            bossHealth = FindObjectOfType<BossHealthBar>();
-            bossHealth.currentHealth -= bulletDamage;
+            if (other.gameObject.GetComponent<BossHealthBar>() != null)
+            {
+                other.gameObject.GetComponent<BossHealthBar>().currentHealth -= bulletDamage;
+            }
+            else if (other.gameObject.GetComponent<NPCHealthState>() != null)
+            {
+                other.gameObject.GetComponent<NPCHealthState>().npcHealth += bulletDamage;
+            }
         }
     }
 
