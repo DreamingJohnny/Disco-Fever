@@ -44,6 +44,7 @@ public class NPCHealthState : MonoBehaviour
         else 
         {
             sicknessArea.SetActive(false);
+            npcCurrentHealth = npcMaxHealth;
         }
     }
 
