@@ -1,4 +1,4 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,13 +10,11 @@ public class NPCMovement : MonoBehaviour
 
     float npcMoveDistance = 0.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         npcMovement = GetComponent<Transform>().position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         shouldMove = GetComponent<NPCHealthState>().CheckIfCured();
@@ -36,4 +34,3 @@ public class NPCMovement : MonoBehaviour
         transform.position += npcMovement * 0.00001f;
     }
 }
-*/

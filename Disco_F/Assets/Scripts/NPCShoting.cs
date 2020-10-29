@@ -1,50 +1,40 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class NPCShoting : MonoBehaviour
 {
-    public int enemyBulletDamage = 5;
-    public float bulletSpeed;
+    public float enemyBulletDamage = 5f;
+    public float enemyBulletSpeed = 5f;
 
     /*  fix later
     public Sprite[] spritePicture;
     AudioSource shotSound;
     shotSound = GetComponent<AudioSource>();
-
+    */
     
-    public GameObject bullet;
-    Vector3 bulletDirection = new Vector3(-0.5f, 0.25f);
+    public GameObject enemyBullet;
+    Vector3 enemyBulletDirection = new Vector3(-0.25f, 0.5f);
 
     /*
      * So, I need to spawn bullets
      * Then I need the bullets to move in the right direction
      * Then I need the bullet to damage player
-     * Then I need the enemy that 
-     * 
-    //Firing
-        if (Input.GetButtonDown("Fire1"))
-        {
-            shotSound.Play();
-            GameObject firedShot = Instantiate(bullet, transform.position, transform.rotation);
-    firedShot.GetComponent<Rigidbody2D>().velocity = bulletDirection* bulletSpeed;
-}
+     * Then I need the enemy to decide when to shoot, so, probably having a ticker go up right?
+     * And then I need them to be able to fire three bullets.
+     */
 
-// Start is called before the first frame update
-void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if (!GetComponent<Renderer>().isVisible)
+        //When firing
+        GameObject npcFiredBullet = Instantiate(enemyBullet, transform.position, transform.rotation);
+        
+        npcFiredBullet.GetComponent<Rigidbody2D>().velocity = enemyBulletDirection * enemyBulletSpeed;
+
+        /*if (!GetComponent<Renderer>().isVisible)
         {
             Destroy(gameObject);
-        }
-
-
+        }*/
     }
 
     private void OnCollisionEnter2D(Collision2D other)
@@ -53,9 +43,7 @@ void Start()
         {
             Debug.Log("Enemy is trying to do damage");
            
-            other.gameObject.GetComponent<PlayerHealthBar>().TakeDamage(enemyBulletDamage);
+            //other.gameObject.GetComponent<PlayerHealthBar>().TakeDamage(enemyBulletDamage);
         }
     }
 }
-}
-*/
