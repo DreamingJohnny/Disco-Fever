@@ -72,7 +72,7 @@ public class NPCHealthState : MonoBehaviour
         }
     }
 
-    public void TakeDamge(int damage)
+    public void TakeDamage(int damage)
     {
         npcCurrentHealth += damage;
     }

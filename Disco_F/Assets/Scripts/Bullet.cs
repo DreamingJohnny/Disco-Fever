@@ -34,7 +34,7 @@ public class Bullet : MonoBehaviour
             }
             else if (other.gameObject.GetComponent<NPCHealthState>() != null)
             {
-                other.gameObject.GetComponent<NPCHealthState>().TakeDamge(bulletDamage);
+                other.gameObject.GetComponent<NPCHealthState>().TakeDamage(bulletDamage);
             }
         }
     }
