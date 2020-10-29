@@ -10,13 +10,11 @@ public class NPCMovement : MonoBehaviour
 
     float npcMoveDistance = 0.5f;
 
-    // Start is called before the first frame update
     void Start()
     {
         npcMovement = GetComponent<Transform>().position;
     }
 
-    // Update is called once per frame
     void Update()
     {
         shouldMove = GetComponent<NPCHealthState>().CheckIfCured();

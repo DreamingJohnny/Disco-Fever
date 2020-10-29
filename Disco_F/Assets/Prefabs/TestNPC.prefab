@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 1662779904}
   - component: {fileID: 1662779910}
   - component: {fileID: 8538038526108947309}
-  - component: {fileID: 756706294}
   m_Layer: 0
   m_Name: TestNPC
   m_TagString: Enemy
@@ -102,6 +101,7 @@ MonoBehaviour:
   npcFeverThreshold: 10
   npcCuredThreshold: 90
   sicknessArea: {fileID: 0}
+  auraFromStart: 0
 --- !u!212 &1662779904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -184,18 +184,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1dcb63bfa71b2444a821410e9c088ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &756706294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4079717570506316681}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1dcb63bfa71b2444a821410e9c088ac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6925923574737860942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -203,6 +191,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4079717570506316680}
     m_Modifications:
+    - target: {fileID: 2753153845385410155, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
+      propertyPath: auraStrength
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 5409471051084681788, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
