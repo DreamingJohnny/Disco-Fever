@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCBullets : MonoBehaviour
 {
-    public int bulletDamage = 5;
+    public int enemyBulletDamage = 5;
         
     public Sprite spritePicture;
 
@@ -22,13 +22,13 @@ public class NPCBullets : MonoBehaviour
         }*/
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.transform.tag == "Player")
         {
             Debug.Log("Enemy trying to do damage");
             
-            other.gameObject.GetComponent<NPCHealthState>().TakeDamage(bulletDamage);
+            other.gameObject.GetComponent<PlayerHealthBar>().TakeDamage(enemyBulletDamage);
         }
     }
 }
