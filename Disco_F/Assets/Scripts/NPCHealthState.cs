@@ -13,7 +13,7 @@ public class NPCHealthState : MonoBehaviour
     public GameObject sicknessArea;
 
     //Enum to check state if npc is cured, neutral or feverish
-    enum npcState
+    public enum npcState
     {
         isCured,
         isFeverish,
@@ -75,6 +75,17 @@ public class NPCHealthState : MonoBehaviour
     public void TakeDamge(int damage)
     {
         npcCurrentHealth += damage;
+    }
+    public bool CheckIfCured()
+    {
+        if (npcCurrentState != npcState.isCured)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 
