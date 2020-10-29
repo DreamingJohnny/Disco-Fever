@@ -5,22 +5,6 @@ using UnityEngine;
 public class NPCBullets : MonoBehaviour
 {
     public int enemyBulletDamage = 5;
-        
-    public Sprite spritePicture;
-
-    void Start()
-    {
-        GetComponent<SpriteRenderer>().sprite = spritePicture;
-    }
-
-    void Update()
-    {
-       
-        /*if (!GetComponent<Renderer>().isVisible)
-        {
-            Destroy(gameObject);
-        }*/
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {

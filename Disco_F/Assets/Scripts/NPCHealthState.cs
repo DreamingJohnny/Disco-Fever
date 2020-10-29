@@ -20,7 +20,7 @@ public class NPCHealthState : MonoBehaviour
         isFeverish,
         isNeutral
     }
-    npcState npcCurrentState;
+    public npcState npcCurrentState;
 
     void Start()
     {
