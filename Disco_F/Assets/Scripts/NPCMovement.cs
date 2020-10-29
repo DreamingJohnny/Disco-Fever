@@ -15,6 +15,7 @@ public class NPCMovement : MonoBehaviour
     void Start()
     {
         npcMovement = GetComponent<Transform>().position;
+        randomDirection = Random.Range(0, 2);
     }
 
     void Update()
@@ -28,7 +29,7 @@ public class NPCMovement : MonoBehaviour
     }
     void npcMoves()
     {
-        randomDirection = Random.Range(0, 2);
+
         if (randomDirection == 0)
         {
             npcMovement.x -= npcMoveDistance;
@@ -45,10 +46,8 @@ public class NPCMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collided with a trigger box");
         if (collision.transform.tag == "InvisWall")
         {
-            Debug.Log("Collided with an inviswall");
             hitWall = true;
         }
     }
