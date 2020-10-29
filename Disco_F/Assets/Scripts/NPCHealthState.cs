@@ -80,11 +80,11 @@ public class NPCHealthState : MonoBehaviour
     {
         if (npcCurrentState != npcState.isCured)
         {
-            return true;
+            return false;
         }
         else
         {
-            return false;
+            return true;
         }
     }
 }

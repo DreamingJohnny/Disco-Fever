@@ -30,6 +30,9 @@ public class NPCMovement : MonoBehaviour
     }
     void npcMoves()
     {
+        npcMovement.x -= npcMoveDistance * 0.0001f;
+        npcMovement.y -= npcMoveDistance / 2  * 0.0001f;
+
         transform.position += npcMovement;
     }
 }
