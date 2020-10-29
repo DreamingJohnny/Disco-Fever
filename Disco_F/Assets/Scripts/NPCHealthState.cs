@@ -6,7 +6,7 @@ using UnityEngine;
 public class NPCHealthState : MonoBehaviour
 {
     //Logic operators for npc health and what state they are in
-    float npcCurrentHealth;
+    public float npcCurrentHealth;
     public float npcMaxHealth = 100;
     public float npcFeverThreshold = 10;
     public float npcCuredThreshold = 90;
