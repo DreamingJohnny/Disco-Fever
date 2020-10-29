@@ -22,7 +22,7 @@ public class NPCMovement : MonoBehaviour
     {
         shouldMove = GetComponent<NPCHealthState>().CheckIfCured();
 
-        if(shouldMove && hitWall == false)
+        if(shouldMove && (hitWall == false))
         {       
             npcMoves();
         }

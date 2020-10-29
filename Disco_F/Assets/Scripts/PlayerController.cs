@@ -89,7 +89,7 @@ public class PlayerController : MonoBehaviour
         {
             currentDistance = hit.distance;
             if (currentDistance < minDistance)
-            {
+            {                
                 blockedLeft = true;
             }
         }

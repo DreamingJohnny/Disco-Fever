@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3105071775392979079}
   m_Layer: 8
   m_Name: BlockingBlock
-  m_TagString: Untagged
+  m_TagString: InvisWall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +109,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.019702911, y: 0.2580955}
+  m_Offset: {x: -0.019702911, y: 0.37991202}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -120,5 +120,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.6181718, y: 1.516191}
+  m_Size: {x: 0.6181718, y: 0.8200965}
   m_EdgeRadius: 0
