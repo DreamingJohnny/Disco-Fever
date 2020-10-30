@@ -16,8 +16,9 @@ GameObject:
   - component: {fileID: 1662779910}
   - component: {fileID: 8538038526108947309}
   - component: {fileID: 760261842}
+  - component: {fileID: 863159585}
   m_Layer: 0
-  m_Name: TestNPC
+  m_Name: NPC
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,8 +102,9 @@ MonoBehaviour:
   npcMaxHealth: 100
   npcFeverThreshold: 10
   npcCuredThreshold: 90
-  sicknessArea: {fileID: 0}
+  sicknessArea: {fileID: 3806476492990752359}
   auraFromStart: 0
+  npcCurrentState: 0
 --- !u!212 &1662779904
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -202,6 +204,32 @@ MonoBehaviour:
   timeBetweenEnemyShots: 100
   timeSinceEnemyShot: 0
   enemyBullet: {fileID: 6088114856428496731, guid: 80de3a81ae3b1ed4cb7643214f96c334, type: 3}
+--- !u!61 &863159585
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4079717570506316681}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.020296305, y: -0.34557897}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1, y: 2}
+    newSize: {x: 0.11, y: 0.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6940771, y: 1.3088421}
+  m_EdgeRadius: 0
 --- !u!1001 &6925923574737860942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -209,9 +237,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4079717570506316680}
     m_Modifications:
+    - target: {fileID: 486616709037979575, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2753153845385410155, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
       propertyPath: auraStrength
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753153845385410155, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
+      propertyPath: auraGrowth.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753153845385410155, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
+      propertyPath: auraGrowth.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2753153845385410155, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
+      propertyPath: auraGrowth.z
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5409471051084681788, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
       propertyPath: m_LocalPosition.x
@@ -275,6 +319,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
+--- !u!1 &3806476492990752359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6110963547688558377, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
+  m_PrefabInstance: {fileID: 6925923574737860942}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3102874080842984306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5409471051084681788, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}

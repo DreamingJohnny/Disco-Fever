@@ -7,14 +7,16 @@ public class PlayerHealthBar : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    bool isDead;
 
     public HealthBar healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
+        isDead = false;
         currentHealth = maxHealth;
-        healthBar.SetMaxHealth(maxHealth);
+        healthBar.SetMaxHealth(maxHealth);      
     }
 
     // Update is called once per frame
@@ -24,6 +26,11 @@ public class PlayerHealthBar : MonoBehaviour
         {
             TakeDamage(20);
         }
+
+        if (currentHealth <= 0)
+        {
+            isDead = true;
+        }
     }
 
     public void TakeDamage(int damage)
@@ -31,5 +38,10 @@ public class PlayerHealthBar : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+    }
+
+    public bool CheckPlayerAlive()
+    {
+        return isDead;
     }
 }

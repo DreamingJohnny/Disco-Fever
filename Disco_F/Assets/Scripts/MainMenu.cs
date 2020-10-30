@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.SceneManagement;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("MainScene");
+        Debug.Log("Trying to go to Level1");
+        SceneManager.LoadScene("Level1");
     }
 
     public void QuitGame()
@@ -18,8 +19,14 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
+    public void GameOver()
+    {
+        Debug.Log("Trying to go to GameOverScene");
+        SceneManager.LoadScene("GameOverScene");
+    }
+
     public void ReturnToMainMenu()
     {
-        SceneManager.LoadScene("JohanMenuScene");
+        SceneManager.LoadScene("MainMenuScene");
     }
 }
