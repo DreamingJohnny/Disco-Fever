@@ -8,11 +8,6 @@ public class SicknessAura : MonoBehaviour
  
     public Vector3 auraGrowth = new Vector3(0.1f, 0.1f, 0.1f);
 
-    void Start()
-    {
-
-    }
-
     private void Update()
     {
         AuraExpanding();

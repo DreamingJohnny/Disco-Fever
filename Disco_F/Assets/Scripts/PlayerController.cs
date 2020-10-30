@@ -18,13 +18,11 @@ public class PlayerController : MonoBehaviour
     Vector3 bulletDirection = new Vector3(-0.5f, 0.25f);
     AudioSource shotSound;
 
-
     void Start()
     {
         movement = GetComponent<Transform>().position;
         shotSound = GetComponent<AudioSource>();
     }
-
 
     void Update()
     {
@@ -35,24 +33,24 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Horizontal"))
         {
-            if(x > 0 && !blockedRight)
+            if (x > 0 && !blockedRight)
             {
                 movement.x += moveDistance;
                 movement.y += (moveDistance / 2);
             }
-            else if(x < 0 && !blockedLeft)
+            else if (x < 0 && !blockedLeft)
             {
                 movement.x -= moveDistance;
                 movement.y -= (moveDistance / 2);
             }
-
             transform.position += movement;
         }
-
         else
-            movement = new Vector3(0,0);
+        {
+            movement = new Vector3(0, 0);
+        }
 
-        //Fireing
+        //Firing
         if (Input.GetButtonDown("Fire1"))
         {
             shotSound.Play();
@@ -65,7 +63,6 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 right = transform.TransformDirection(Vector3.right) * minDistance;
         Debug.DrawRay(transform.position, right, Color.red);
-
 
         if (Physics2D.Raycast(transform.position, (right), minDistance))
         {

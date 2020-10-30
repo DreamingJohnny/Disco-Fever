@@ -12,11 +12,6 @@ public class NPCShooting : MonoBehaviour
     public GameObject enemyBullet;
     Vector3 enemyBulletDirection = new Vector3(0.25f, -0.125f);
 
-    /*
-     * then I need the enemy to decide to fire bullets.
-     * And then I need them to be able to fire three bullets.
-     */
-
     void Update()
     {
         if (GetComponent<NPCHealthState>().npcCurrentState == NPCHealthState.npcState.isFeverish)
