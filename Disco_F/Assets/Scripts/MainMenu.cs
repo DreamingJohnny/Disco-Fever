@@ -19,11 +19,7 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void GameOver()
-    {
-        Debug.Log("Trying to go to GameOverScene");
-        SceneManager.LoadScene("GameOverScene");
-    }
+
 
     public void ReturnToMainMenu()
     {
