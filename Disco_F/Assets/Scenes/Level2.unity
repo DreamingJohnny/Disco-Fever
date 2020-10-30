@@ -2763,6 +2763,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcCurrentHealth
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
 --- !u!4 &406853383 stripped
@@ -7240,11 +7244,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4079717570506316680, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4079717570506316680, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.25
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4079717570506316680, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12103,7 +12107,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
       propertyPath: auraFromStart
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcCurrentHealth
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}

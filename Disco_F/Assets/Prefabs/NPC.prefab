@@ -98,9 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca78e22c87f30bd47a8f54b940c67365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcCurrentHealth: 0
+  npcCurrentHealth: 50
   npcMaxHealth: 100
-  npcFeverThreshold: 10
+  npcFeverThreshold: 15
   npcCuredThreshold: 90
   sicknessArea: {fileID: 3806476492990752359}
   auraFromStart: 0
@@ -243,7 +243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2753153845385410155, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
       propertyPath: auraStrength
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2753153845385410155, guid: 5f50aa683f2a3634d9d285a745c1feba, type: 3}
       propertyPath: auraGrowth.x

@@ -6,9 +6,9 @@ using UnityEngine;
 public class NPCHealthState : MonoBehaviour
 {
     //Logic operators for npc health and what state they are in
-    public float npcCurrentHealth;
+    public float npcCurrentHealth = 50;
     public float npcMaxHealth = 100;
-    public float npcFeverThreshold = 10;
+    public float npcFeverThreshold = 15;
     public float npcCuredThreshold = 90;
     public GameObject sicknessArea;
     public bool auraFromStart;
@@ -25,8 +25,6 @@ public class NPCHealthState : MonoBehaviour
     void Start()
     {
         npcCurrentState = npcState.isNeutral;
-
-        npcCurrentHealth = npcMaxHealth * 0.5f;
 
         sicknessArea.GetComponent<SicknessAura>().enabled = auraFromStart;
     }

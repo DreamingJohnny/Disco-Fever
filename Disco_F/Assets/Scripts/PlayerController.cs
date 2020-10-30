@@ -66,6 +66,7 @@ public class PlayerController : MonoBehaviour
         Vector3 right = transform.TransformDirection(Vector3.right) * minDistance;
         Debug.DrawRay(transform.position, right, Color.red);
 
+
         if (Physics2D.Raycast(transform.position, (right), minDistance))
         {
             currentDistance = hit.distance;

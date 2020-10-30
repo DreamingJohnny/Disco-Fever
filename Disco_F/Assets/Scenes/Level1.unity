@@ -1194,6 +1194,14 @@ PrefabInstance:
       propertyPath: sicknessArea
       value: 
       objectReference: {fileID: 584648795}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcCurrentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcFeverThreshold
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
 --- !u!4 &219753481 stripped
@@ -1981,6 +1989,14 @@ PrefabInstance:
       propertyPath: sicknessArea
       value: 
       objectReference: {fileID: 277766418}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcCurrentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcFeverThreshold
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
 --- !u!4 &470609610 stripped
@@ -4159,7 +4175,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
       propertyPath: auraFromStart
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcCurrentHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcFeverThreshold
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
@@ -4304,6 +4328,14 @@ PrefabInstance:
     - target: {fileID: 4079717570506316681, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
       propertyPath: m_Name
       value: NPC (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcCurrentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcFeverThreshold
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
@@ -5858,6 +5890,14 @@ PrefabInstance:
       propertyPath: sicknessArea
       value: 
       objectReference: {fileID: 1744669867}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcCurrentHealth
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
+      propertyPath: npcFeverThreshold
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
 --- !u!4 &1458205382 stripped
@@ -7763,18 +7803,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: NPC (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: npcCurrentState
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: auraFromStart
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7393174578335179687, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-      propertyPath: sicknessArea
-      value: 
-      objectReference: {fileID: 2066415682}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
 --- !u!4 &2025907789 stripped
@@ -7864,11 +7892,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &2066415682 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3806476492990752359, guid: 6cbb1d34786d7af4fa8df6c0957bcedc, type: 3}
-  m_PrefabInstance: {fileID: 2025907788}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2070441516
 GameObject:
   m_ObjectHideFlags: 0
