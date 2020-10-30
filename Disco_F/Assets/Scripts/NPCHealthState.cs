@@ -43,6 +43,7 @@ public class NPCHealthState : MonoBehaviour
         {
             sicknessArea.SetActive(false);
             npcCurrentHealth = npcMaxHealth;
+            
         }
     }
 
@@ -52,6 +53,7 @@ public class NPCHealthState : MonoBehaviour
         if (npcCurrentHealth > npcCuredThreshold)
         {
             npcCurrentState = npcState.isCured;
+            EnemyManager.currentCuredEnemies++;
         }
         else if (npcCurrentHealth > npcFeverThreshold)
         {
